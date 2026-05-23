@@ -56,6 +56,6 @@ php -S 127.0.0.1:8000 -t public
 ---
 
 ## 📸 Aperçu
-![screen1(assets/screenshot1.png)
-![screen1(assets/screenshot2.png)
-![screen1(assets/screenshot3.png)
+![screen1(public/images/screenshot1.png)
+![screen1(public/images/screenshot2.png)
+![screen1(public/images/screenshot3.png)
