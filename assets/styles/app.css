@@ -1,0 +1,333 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.bottom-nav {
+    display: none;
+}
+
+#realisationTitle {
+    margin-top: 2rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo {
+    height: 250px;
+    margin-bottom: 2rem;
+    width: auto;
+
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background: url("/images/whiteTiles.jpg") center/cover no-repeat;
+    color: #222222;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cta {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-color: #ff6600;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#whyUsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#servicesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+#realisationsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#realisationsContainer .cta {
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    object-fit: cover;
+    border-radius: 10%;
+    width: 25rem;
+    height: 25rem;
+}
+
+#realisations {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#contactContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 2rem auto 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #1f2937;
+    text-decoration: underline;
+}
+
+.form-login {
+    max-width: 600px;
+    margin: 4rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-login label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.form-login input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-login button {
+    margin-top: 1.5rem;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.form-login button:hover {
+    background-color: #21867a;
+}
+
+#loginTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#adminTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#adminContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive for tablet and smartphones */
+
+@media (max-width: 992px) {
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1f2937;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #ccc;
+        padding: 1rem 0;
+        height: 70px;
+    }
+
+    .bottom-nav a {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #whyUsContainer {
+        padding: 7rem 0 7rem 0;
+    }
+
+    .gallery {
+        margin: 3rem 0 3rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #realisationsContainer {
+        display: flex;
+        width: 100%;
+    }
+
+    #realisationsContainer .cta {
+        margin-bottom: 5rem;
+    }
+
+    #realisations {
+        margin: 3rem 0 3rem 0;
+        gap: 3rem;
+    }
+
+    .gallery-item {
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+
+    .contact-info {
+        margin: 1rem 1rem 4rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .contact-details {
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+    }
+}

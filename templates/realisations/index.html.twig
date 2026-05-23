@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MJC - Réalisations{% endblock %}
+
+{% block body %}
+    <section id="realisationsContainer">
+        <h1 id="realisationTitle">Mes Réalisations</h1>
+        <div id="realisations">
+            {% for image in images %}
+                <img src="{{ asset(image.filePath) }}"
+                alt="{{ image.altText }}"
+                class="gallery-item">
+            {% else %}
+                <p>Aucune image trouvée.</p>
+            {% endfor %}
+        </div>
+        <a href="/contact" class="cta">Contactez moi !</a>
+    </section>
+{% endblock %}

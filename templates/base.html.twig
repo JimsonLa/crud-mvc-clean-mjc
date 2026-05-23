@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+            <header>
+               <nav class="navbar">
+                <a href="/">Accueil</a>
+                <a href="/realisations">Réalisations</a>
+                <a href="/contact">Contact</a>
+                {% if app.user %}
+                    <a href="{{ path('app_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}">Connexion</a>
+                {% endif %}
+                {% if app.user and is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin_dashboard') }}" class="btn btn-admin">Panel Admin</a>
+                {% endif %}
+            </nav> 
+            </header>
+        {% endblock %}
+        {% block body %}
+
+        {% endblock %}
+        {% block footer %}
+            <div class="bottom-nav">
+                <a href="/">🏠<br>Accueil</a>
+                <a href="/realisations">🧱<br>Réalisations</a>
+                <a href="/contact">📞<br>Contact</a>
+                {% if app.user %}
+                    <a href="{{ path('app_logout') }}">🔑<br>Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}">🔑<br>Connexion</a>
+                {% endif %}
+                {% if app.user and is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin_dashboard') }}" class="btn btn-admin">🔑<br>Panel Admin</br></a>
+                {% endif %}
+            </div>
+        {% endblock %}
+    </body>
+</html>

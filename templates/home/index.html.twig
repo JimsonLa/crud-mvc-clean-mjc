@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MJC - Accueil{% endblock %}
+
+{% block body %}
+{# Main page #}
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="{{ asset('images/logo2beforeUnblur.png') }}" alt="Logo Carreleur" class="logo">
+            <h2>Artisan carreleur à Valenciennes</h2>
+            <p>Des années d'expérience, un travail soigné.</p>
+            <a href="#realisations" class="cta">Voir les réalisations</a>
+        </div>
+    </section>
+    <section id="whyUs">
+        <div id="whyUsContainer">
+        <h2>Pourquoi moi ?</h2>
+        <ul class="space-y-4" id="whyUsList">
+            <li><strong>✅ Plus de 20 ans d’expérience :</strong> du vrai savoir-faire artisanal.</li>
+            <li><strong>🧱 Spécialiste intérieur/extérieur :</strong> maîtrise totale des techniques.</li>
+            <li><strong>⭐ Note Google 4.9/5 :</strong> clients satisfaits.</li>
+            <li><strong>📍 Basé à Valenciennes :</strong> interventions rapides et locales.</li>
+        </ul>
+        </div>
+    </section>
+    <section id="services">
+        <div id="servicesContainer">
+            <h2>Mes services</h2>
+            <ul id="servicesList">
+                <li><strong>🏗️ Chape traditionnelle :</strong> base solide pour tous vos sols.</li>
+                <li><strong>🧱 Pose de carrelage scellé ou collé :</strong> finition impeccable, durable et esthétique.</li>
+                <li><strong>🎨 Faïence :</strong> habillage mural personnalisé et résistant.</li>
+                <li><strong>🚿 Douche à l’italienne :</strong> design moderne et accès facilité.</li>
+                <li><strong>🏡 Terrasse :</strong> création d’espaces extérieurs élégants et robustes.</li>
+                <li><strong>🛠️ Pose d’isolant thermique et phonique sous chape :</strong> confort et économies d’énergie.</li>
+                <li><strong>📏 Tout type de format :</strong> du petit carreau au grand format XXL.</li>
+                <li><strong>🧱 Pavés :</strong> élégance et solidité pour vos allées et extérieurs.</li>
+                <li><strong>🪜 Carrelage sur plots :</strong> pose facile et adaptable sur terrasses et balcons.</li>
+                <li><strong>✔️ Garantie décennale :</strong> votre tranquillité d’esprit assurée.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="realisations">
+        <div id="realisationsContainer">
+            <h2>Mes réalisations</h2>
+            <p>Découvrez quelques-unes de mes réalisations récentes :</p>
+            <div class="gallery">
+                <img src="{{ asset('images/realisations/pizza1.jpg') }}" alt="Réalisation 1" class="gallery-item">
+                <img src="{{ asset('images/realisations/carrelage3.jpg') }}" alt="Réalisation 1" class="gallery-item">
+                <img src="{{ asset('images/realisations/exterieur1.jpg') }}" alt="Réalisation 1" class="gallery-item">
+            </div>
+            <a href="/realisations" class="cta">Voir toutes les réalisations</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

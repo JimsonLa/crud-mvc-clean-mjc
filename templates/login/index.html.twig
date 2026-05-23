@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MJC - Connexion{% endblock %}
+
+{% block body %}
+    <div id="loginTitle">
+        <h1>Se connecter</h1>
+    </div>
+
+    <section id="loginContainer">
+        <form class="form-login" method="post">
+            <h2>Connexion</h2>
+
+            {% if error %}
+                <div class="flash-error">
+                    Identifiants invalides.
+                </div>
+            {% endif %}
+
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" required autofocus>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="_password" required>
+
+            <button type="submit">Se connecter</button>
+        </form>
+    </section>
+{% endblock %}
