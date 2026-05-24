@@ -74,9 +74,6 @@ php bin/console doctrine:fixtures:load
 ### Serveur de Développement
 
 ```bash
-# Avec Symfony CLI (recommandé)
-symfony server:start
-
 # Avec le serveur PHP intégré
 php -S localhost:8000 -t public/
 ```
@@ -96,32 +93,6 @@ docker-compose up -d
 # Accéder à l'application
 # Web : http://localhost:8080
 # Base de données : localhost:3306
-```
-
-## 📁 Structure du Projet
-
-```
-mjc/
-├── src/
-│   ├── Controller/          # Contrôleurs de l'application
-│   │   ├── Admin/           # Contrôleurs EasyAdmin
-│   │   ├── HomeController.php
-│   │   ├── RealisationsController.php
-│   │   └── ContactController.php
-│   ├── Entity/              # Entités Doctrine
-│   │   ├── Image.php        # Entité Image avec VichUploader
-│   │   └── User.php         # Authentification utilisateur
-│   └── Repository/          # Dépôts de base de données
-├── templates/               # Templates Twig
-│   ├── home/
-│   ├── realisations/
-│   ├── contact/
-│   └── admin/
-├── public/
-│   ├── images/             # Images statiques
-│   └── uploads/            # Contenu uploadé par les utilisateurs
-├── migrations/             # Migrations de base de données
-└── config/                 # Configuration Symfony
 ```
 
 ## 🎨 Personnalisation
